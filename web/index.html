@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sklep internetowy</title>
+
+    <link rel="stylesheet" href="../css/myStyle.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="application/javascript" src="../js/simpleCart.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Prosty sklep internetowy</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="koszyk"><a href="#" data-toggle="modal" data-target="#myModal">Koszyk(<span
+                                    class="simpleCart_quantity"></span>) </a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <label>Producent:</label>
+
+            <div class="controls btn-group">
+                <button class="filter btn btn-sm btn-warning" data-filter="all">All</button>
+                <button class="filter btn btn-sm btn-warning" data-filter=".Apple">Apple</button>
+                <button class="filter btn btn-sm btn-warning" data-filter=".Dell">Dell</button>
+                <button class="filter btn btn-sm btn-warning" data-filter=".Palm">Palm</button>
+            </div>
+            <div class="pull-right">
+                <label>Cena:</label>
+
+                <button class="sort btn btn-sm btn-warning" data-sort="price:asc">Rosnąco</button>
+                <button class="sort btn btn-sm btn-warning" data-sort="price:desc">Malejąco</button>
+            </div>
+        </div>
+
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Koszyk <span class="showIfEmpty">jest pusty </span></h4>
+            </div>
+            <div class="hideIfEmpty">
+                <div class="modal-body">
+                    <div class="simpleCart_items"></div>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>Łącznie</th>
+                            <th>Koszty przesyłki</th>
+                            <th>Do zapłaty</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="simpleCart_total"></div>
+                            </td>
+                            <td>
+                                <div class="simpleCart_shipping"></div>
+                            </td>
+                            <td>
+                                <div class="simpleCart_grandTotal"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class="simpleCart_empty btn btn-default">Opróżnij koszyk</a>
+                    <a href="javascript:;" class="simpleCart_checkout btn btn-default">Załóż zamówienie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+&nbsp;
+
+
+<div  id="Container"  class="container">
+
+
+    <div class="row">
+        <div class="col-md-4 item text-center Apple mix" data-price="35.99">
+            <div class="simpleCart_shelfItem">
+                <h2 class="item_name">Iphone 10s</h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="item_thumb" src="../img/iphone.png" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="item_price">35.99 zł</h2><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="ilość"><br>
+                    </div>
+                    <div class="col-xs-5">
+                        <a type="button" class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 item text-center  mix Asus" data-price="315.99">
+            <div class="simpleCart_shelfItem">
+                <h2 class="item_name">Asus Phone</h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="item_thumb" src="../img/asus.png" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="item_price">315.99 zł</h2><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="ilość"><br>
+                    </div>
+                    <div class="col-xs-5">
+                        <a type="button" class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 item text-center Dell mix" data-price="115.99" >
+            <div class="simpleCart_shelfItem">
+                <h2 class="item_name">Dell Phone</h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="item_thumb" src="../img/dell.png" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="item_price">115.99 zł</h2><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="ilość"><br>
+                    </div>
+                    <div class="col-xs-5">
+                        <a type="button" class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--/row-->
+    <div class="row">
+
+        <div class="col-md-4 item text-center Windows mix" data-price="123.99">
+            <div class="simpleCart_shelfItem">
+                <h2 class="item_name">Motorola Phone</h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="item_thumb" src="../img/motorola.png" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="item_price">123.99 zł</h2><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="ilość"><br>
+                    </div>
+                    <div class="col-xs-5">
+                        <a type="button" class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 item text-center Palm mix" data-price="593.99">
+            <div class="simpleCart_shelfItem">
+                <h2 class="item_name">Palm Phone</h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="item_thumb" src="../img/palm.png" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="item_price">593.99 zł</h2><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="ilość"><br>
+                    </div>
+                    <div class="col-xs-5">
+                        <a type="button" class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 item text-center Windows mix" data-price="693.99">
+            <div class="simpleCart_shelfItem">
+                <h2 class="item_name">Windows Phone</h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="item_thumb" src="../img/wp.png" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="item_price">693.99 zł</h2><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" value="1" class="item_Quantity form-control" placeholder="ilość"><br>
+                    </div>
+                    <div class="col-xs-5">
+                        <a type="button" class="item_add btn btn-primary" href="javascript:;"> Add to Cart </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--/row-->
+    <div class="gap"></div>
+    <div class="gap"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js?v=2.1.9"></script>
+<script src="simpleCart.js"></script>
+<script>
+    simpleCart({
+        cartColumns: [
+            {attr: "name", label: "Produkt"},
+            {view: 'image', attr: 'thumb', label: false},
+            {view: "currency", attr: "price", label: "Cena"},
+            {view: "decrement", label: false, text: '<span class="glyphicon glyphicon-minus"> </span>'},
+            {attr: "quantity", label: "Ilość"},
+            {view: "increment", label: false, text: '<span class="glyphicon glyphicon-plus"> </span>'},
+            {view: "currency", attr: "Suma", label: "Razem"},
+            {view: "remove", text: "Usuń", label: false, text: '<span class="glyphicon glyphicon-remove"> </span>'}
+        ],
+
+        cartStyle: "table",
+        checkout: {
+            type: "PayPal",
+            email: "xurten@gmail.com"
+        },
+        currency: "PLN",
+        data: {},
+        language: "english-us",
+        excludeFromCheckout: [],
+        shippingCustom: function () {
+            if (simpleCart.quantity() > 20) {
+                return 0;
+            } else {
+                return 10;
+            }
+        },
+        shippingFlatRate: 0,
+        shippingQuantityRate: 0,
+        shippingTotalRate: 0,
+        taxRate: 0,
+        taxShipping: false,
+        beforeAdd: null,
+        afterAdd: null,
+        load: null,
+        beforeSave: null,
+        afterSave: null,
+        update: null,
+        ready: null,
+        checkoutSuccess: null,
+        checkoutFail: null,
+        beforeCheckout: null,
+        beforeRemove: null
+    });
+
+    simpleCart.bind("afterAdd", function (item) {
+        $('.koszyk').fadeOut(500).fadeIn(500);
+    });
+
+    simpleCart.bind('update', function () {
+        if (simpleCart.quantity() === 0) {
+            $(".hideIfEmpty").hide();
+            $(".showIfEmpty").show();
+        }
+        else {
+            $(".hideIfEmpty").show();
+            $(".showIfEmpty").hide();
+        }
+    });
+</script>
+
+<script>
+    $(function () {
+        $('#Container').mixItUp();
+    });
+</script>
+
+</body>
+</html>

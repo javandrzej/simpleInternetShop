@@ -1,0 +1,25 @@
+.item:hover{
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    box-shadow: 0 0 20px #888;
+    background: #fff;
+}
+.item
+{
+    padding: 20px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+.simpleCart_items img {
+    max-width: 50px;
+    max-height: 50px;
+}
+.item-quantity, .item-decrement, .item-increment
+{
+    text-align: center;
+}
+.mix
+{
+    display: none;
+}
